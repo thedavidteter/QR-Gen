@@ -1,0 +1,116 @@
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#qrCodeForm {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  margin-bottom: 40px;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+input {
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+button {
+  background-color: #1c9aea;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #1982c7;
+}
+
+@media only screen and (max-width: 480px) {
+  #qrCodeForm {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  input {
+    margin-bottom: 5px;
+  }
+}
+
+/* New section to format QR Codes for Print */
+
+#qrCodes {
+  /*nothing at moment*/
+}
+
+.qrCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.qrCode img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.qrCode p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.location-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  page-break-after: always;
+}
+
+.location-header {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+
+
+@media print {
+
+  form,
+  button,
+  input,
+  select,
+  textarea,
+  header *,
+  h1 {
+    display: none;
+  }
+}

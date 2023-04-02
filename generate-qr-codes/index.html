@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="qr.css">
+</head>
+
+<body>
+  <h1>Caring Transtions QR Code Generator</h1>
+  <div>
+    <form id="qrCodeForm">
+      <div id="areaInputs">
+        <h3>Area</h3>
+        <div class="area-row">
+          <label>Name:</label>
+          <input type="text" class="areaName" required>
+          <label>Code:</label>
+          <input type="text" class="locationCode" required>
+        </div>
+      </div>
+      <button type="button" id="addArea">+ Add Area</button>
+      <br>
+      <div id="saleInputs">
+        <h3>Sale</h3>
+        <div class="sale-row">
+          <label>Name:</label>
+          <input type="text" class="saleName" required>
+          <label>ID:</label>
+          <input type="text" class="saleID" required>
+        </div>
+      </div>
+      <button type="button" id="addSale">+ Add Sale</button>
+      <br>
+      <label for="lotsPerRoom">Generate lots per room:</label>
+      <input type="number" id="lotsPerRoom" required>
+      <br>
+      <button type="submit">Generate QR Codes</button>
+    </form>
+    <div id="qrCodes"></div>
+
+  </div>
+  <div id="qrCodes"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="generate-qr-codes.js"></script>
+</body>
+
+</html>
+
