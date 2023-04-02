@@ -60,7 +60,7 @@ function generateQRCodes(e) {
           saleID,
           locationCode,
           sequenceCode: sequenceCodeM,
-          itemID: `${locationCode}-${sequenceCodeM}-${saleNames.flat()[saleIndex]}`,
+          itemID: `${locationCode}-${sequenceCodeM}-${saleID}`,
         };
         
 
